@@ -1,0 +1,499 @@
+<svg
+xmlns="http://www.w3.org/2000/svg"
+xml:space="preserve"
+width="560"
+height="650"
+viewBox="0 0 560 650">
+
+<rect
+width="100%"
+height="100%"
+fill="#0d1117"/>
+
+<style>
+
+.ascii {
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    font-weight: 600;
+    fill: #c9d1d9;
+    white-space: pre;
+}
+
+.row {
+    opacity: 0;
+    animation:
+        appear 0.18s ease-out forwards;
+}
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+</style>
+
+<text
+class="ascii row"
+x="8"
+y="10"
+style="animation-delay:0.000s"
+>                                                                      </text>
+
+<text
+class="ascii row"
+x="8"
+y="20"
+style="animation-delay:0.035s"
+>                                                                      </text>
+
+<text
+class="ascii row"
+x="8"
+y="30"
+style="animation-delay:0.070s"
+>                                                                      </text>
+
+<text
+class="ascii row"
+x="8"
+y="40"
+style="animation-delay:0.105s"
+>                                                                      </text>
+
+<text
+class="ascii row"
+x="8"
+y="50"
+style="animation-delay:0.140s"
+>####**##*******************+++++++++++++++++***********************###</text>
+
+<text
+class="ascii row"
+x="8"
+y="60"
+style="animation-delay:0.175s"
+>###**********************+++++++++++++++++++++**********************##</text>
+
+<text
+class="ascii row"
+x="8"
+y="70"
+style="animation-delay:0.210s"
+>#*********************+++++++++=+++++++++++++++**********************#</text>
+
+<text
+class="ascii row"
+x="8"
+y="80"
+style="animation-delay:0.245s"
+>*****************++++++++++===============+++++++++++*****************</text>
+
+<text
+class="ascii row"
+x="8"
+y="90"
+style="animation-delay:0.280s"
+>**************+++++++++=======================+++++++++***************</text>
+
+<text
+class="ascii row"
+x="8"
+y="100"
+style="animation-delay:0.315s"
+>*************+++++++==========+*#####**+==========+++++++*************</text>
+
+<text
+class="ascii row"
+x="8"
+y="110"
+style="animation-delay:0.350s"
+>***********+++++++=======-=+#%%%%@%%@%%%%*+=========++++++******++****</text>
+
+<text
+class="ascii row"
+x="8"
+y="120"
+style="animation-delay:0.385s"
+>***********+++++======---=#%%@%%%%@@@@@%%%%#*=-======++++++++***++****</text>
+
+<text
+class="ascii row"
+x="8"
+y="130"
+style="animation-delay:0.420s"
+>**********++++++====----+##%%%%%%%@%@@@@%%%%#*+--=====++++++++*+++****</text>
+
+<text
+class="ascii row"
+x="8"
+y="140"
+style="animation-delay:0.455s"
+>********+++++++====----*##%###%%%%%@@@@@@@@####+--=====++++++++++*****</text>
+
+<text
+class="ascii row"
+x="8"
+y="150"
+style="animation-delay:0.490s"
+>******++++++++====---=##**###**##%%@@@@@@@@@##%%+---====++++++++++****</text>
+
+<text
+class="ascii row"
+x="8"
+y="160"
+style="animation-delay:0.525s"
+>*****+++++++++====--=*###%%###%%@@@@%%@@@@@@@%@@%=--====++++++++++****</text>
+
+<text
+class="ascii row"
+x="8"
+y="170"
+style="animation-delay:0.560s"
+>****++++++++++====-=*#%@@%###%%%%%##***###%%%@@@@#--=====+++++++++****</text>
+
+<text
+class="ascii row"
+x="8"
+y="180"
+style="animation-delay:0.595s"
+>****++++++++++======##%@%##*++++++======+**#%%%@@%=--====++++++++++***</text>
+
+<text
+class="ascii row"
+x="8"
+y="190"
+style="animation-delay:0.630s"
+>****+++++++++=======%%@@#+=-:----------==+**##%%@%---=====+++++++++***</text>
+
+<text
+class="ascii row"
+x="8"
+y="200"
+style="animation-delay:0.665s"
+>***++++++++++======+%%%*=-:::::--------==+***#%%@@=--=======+++++++***</text>
+
+<text
+class="ascii row"
+x="8"
+y="210"
+style="animation-delay:0.700s"
+>***+++++++++=======+%##+-:::::--------==+****###%@=---=======++++++***</text>
+
+<text
+class="ascii row"
+x="8"
+y="220"
+style="animation-delay:0.735s"
+>***++++++++========+%#*=---:::--=---=-==+****+**#%----========+++++***</text>
+
+<text
+class="ascii row"
+x="8"
+y="230"
+style="animation-delay:0.770s"
+>***+++++============%#*=----:::-----::--++***=-+*#-----=========++++**</text>
+
+<text
+class="ascii row"
+x="8"
+y="240"
+style="animation-delay:0.805s"
+>**+++++=============%#*==-::..::---::::-=+**+=:-**:----==========+++**</text>
+
+<text
+class="ascii row"
+x="8"
+y="250"
+style="animation-delay:0.840s"
+>**++++==============##+==-=+**+==----+#%%%##+-:-+=:-----=========++++*</text>
+
+<text
+class="ascii row"
+x="8"
+y="260"
+style="animation-delay:0.875s"
+>**++++==============+#*+++++*#%#*==+*%@%*+*#*:::*-------==========+++*</text>
+
+<text
+class="ascii row"
+x="8"
+y="270"
+style="animation-delay:0.910s"
+>*++++==============-=#*==+*#%@%%#=-*%@%*%@@%#=::###*----==========+++*</text>
+
+<text
+class="ascii row"
+x="8"
+y="280"
+style="animation-delay:0.945s"
+>*++++=============*+-=*++#%*#%##+-:+%%*=###%%*::###%----==========+++*</text>
+
+<text
+class="ascii row"
+x="8"
+y="290"
+style="animation-delay:0.980s"
+>*++++=============*-.+*====+*##+=-:=##+++****+-:###%----===========++*</text>
+
+<text
+class="ascii row"
+x="8"
+y="300"
+style="animation-delay:1.015s"
+>*+++==============+-+#*=-:::-=---:.=##+-----=+-:#@#*-----==========+++</text>
+
+<text
+class="ascii row"
+x="8"
+y="310"
+style="animation-delay:1.050s"
+>*+++===============-+-+=::..:::--:.-*%*-:::-=+-:*@%=-----==========+++</text>
+
+<text
+class="ascii row"
+x="8"
+y="320"
+style="animation-delay:1.085s"
+>*+++================-=++::...---:..-+**=:::-==-=%%%------==========+++</text>
+
+<text
+class="ascii row"
+x="8"
+y="330"
+style="animation-delay:1.120s"
+>+++=================-:+*=::::=+-==:-####-:-=+=-+%%*------==========+++</text>
+
+<text
+class="ascii row"
+x="8"
+y="340"
+style="animation-delay:1.155s"
+>+++=============-===::-*+---=+-:==+#%%%*===++==*%#=------==========+++</text>
+
+<text
+class="ascii row"
+x="8"
+y="350"
+style="animation-delay:1.190s"
+>+++===========--------+**+++*+==-=++#%#*++**++=:=-:------==========+++</text>
+
+<text
+class="ascii row"
+x="8"
+y="360"
+style="animation-delay:1.225s"
+>+++========------------=+++++##+====+###%*##*+=::::-------=========+++</text>
+
+<text
+class="ascii row"
+x="8"
+y="370"
+style="animation-delay:1.260s"
+>+++=======--------------*===+***+++**%@@#*#*++-:::::-----------====+++</text>
+
+<text
+class="ascii row"
+x="8"
+y="380"
+style="animation-delay:1.295s"
+>+++======---------------+*====:--:--=##**##*++::::::-----------=====++</text>
+
+<text
+class="ascii row"
+x="8"
+y="390"
+style="animation-delay:1.330s"
+>+++======---------------:**++=::--++*****##*+-::::::------------====++</text>
+
+<text
+class="ascii row"
+x="8"
+y="400"
+style="animation-delay:1.365s"
+>+++=====---------------:-=**+----=++++****#*-::::::-------------====++</text>
+
+<text
+class="ascii row"
+x="8"
+y="410"
+style="animation-delay:1.400s"
+>++======---------------++-+**=-::---==+**+*+:::::::-------------====++</text>
+
+<text
+class="ascii row"
+x="8"
+y="420"
+style="animation-delay:1.435s"
+>++=====---------------=%=.=+*+-::::--=+*+*+=::::::--------------====++</text>
+
+<text
+class="ascii row"
+x="8"
+y="430"
+style="animation-delay:1.470s"
+>++======--------------#%#..==**=--==+*##*++-::::----------------====++</text>
+
+<text
+class="ascii row"
+x="8"
+y="440"
+style="animation-delay:1.505s"
+>++======-------------#%%%=..-+*####%%%%%*=+=::::::---------------===++</text>
+
+<text
+class="ascii row"
+x="8"
+y="450"
+style="animation-delay:1.540s"
+>++=====-------------#%%%%%:..-+*###%%%%%*==#:::::::::------------===++</text>
+
+<text
+class="ascii row"
+x="8"
+y="460"
+style="animation-delay:1.575s"
+>++====------------*#%%%%%%#...:++*****##+=+%=-:::::::::----------===++</text>
+
+<text
+class="ascii row"
+x="8"
+y="470"
+style="animation-delay:1.610s"
+>++===----------=*%%%%%%%%%%*....-++***##++##=%%*=:::::::----------==++</text>
+
+<text
+class="ascii row"
+x="8"
+y="480"
+style="animation-delay:1.645s"
+>++===--------=*%%%%@%%%#%%%%=....:+***##+*@+-@%@@%*=-:::----------==++</text>
+
+<text
+class="ascii row"
+x="8"
+y="490"
+style="animation-delay:1.680s"
+>+====------=*%%%%%%%%%%%#%%%%-....:-*****##--@%%%@@%%#=-:---------==++</text>
+
+<text
+class="ascii row"
+x="8"
+y="500"
+style="animation-delay:1.715s"
+>+===-----+#%%%%%%%%%%%%%##%%%%:....::+****:--@@#%%@@@@%%*=-------===++</text>
+
+<text
+class="ascii row"
+x="8"
+y="510"
+style="animation-delay:1.750s"
+>+===--=*%%%%%%%%%%%%%%%%%#%%%%#.....::-++::-:%@%#%%%@@@@%%#+------==++</text>
+
+<text
+class="ascii row"
+x="8"
+y="520"
+style="animation-delay:1.785s"
+>+===+#%%%%%%%%%%%%%%%%%@%%%%%%%+.....-###%#=:+@%%%%%%@@@%%%%*-----===+</text>
+
+<text
+class="ascii row"
+x="8"
+y="530"
+style="animation-delay:1.820s"
+>==*%%%%%%%%%%%%%%%%%%%%%@%%%%%%%-...=##%@@%*+-%@#%%%%@@@%%%%@=----===+</text>
+
+<text
+class="ascii row"
+x="8"
+y="540"
+style="animation-delay:1.855s"
+>*%%%%%%%%%%%%%%%%%%%%###%%%%%%%%#:.*@@##%@%*#=*@%%%%%%@@%%%%@#----===+</text>
+
+<text
+class="ascii row"
+x="8"
+y="550"
+style="animation-delay:1.890s"
+>%%%%%%%#%%#%%%%%%%%%%####%@%%%%%%*=+*%@%*%@+++*%%%%%%%@@%%%%@@=---===+</text>
+
+<text
+class="ascii row"
+x="8"
+y="560"
+style="animation-delay:1.925s"
+>%%%###%%#%%%%%%%%%%%%%%%%%@%%%%%%%=-==%@##@+==+#@%%%%%@%%#%%@@+---===+</text>
+
+<text
+class="ascii row"
+x="8"
+y="570"
+style="animation-delay:1.960s"
+>%%%%###%%%%%%%%%%%%%%%%%%%@%%%%%%%#-:::%%#@*=-=*@%%%%%%@%#%%@@*---===+</text>
+
+<text
+class="ascii row"
+x="8"
+y="580"
+style="animation-delay:1.995s"
+>%%%#####%%%%%%%%%%%%%%%%%%%@%%%%%%%=::.**#%%=--+%%%%%%%%%#%%@@#---==++</text>
+
+<text
+class="ascii row"
+x="8"
+y="590"
+style="animation-delay:2.030s"
+>%%%%###%%@%%%%%%%%%%%%%%%%%@@%@@%%%%:::***%@+--+*@#%%%%%%#%%@@%--===++</text>
+
+<text
+class="ascii row"
+x="8"
+y="600"
+style="animation-delay:2.065s"
+>%%%%%%%%%%@%%%%%@%%%%%%%%%%%@@@@@%%@+:-***%@#-:=+@%%%%%%%##%@@%=-==+++</text>
+
+<text
+class="ascii row"
+x="8"
+y="610"
+style="animation-delay:2.100s"
+>                                                                      </text>
+
+<text
+class="ascii row"
+x="8"
+y="620"
+style="animation-delay:2.135s"
+>                                                                      </text>
+
+<text
+class="ascii row"
+x="8"
+y="630"
+style="animation-delay:2.170s"
+>                                                                      </text>
+
+<text
+class="ascii row"
+x="8"
+y="640"
+style="animation-delay:2.205s"
+>                                                                      </text>
+
+<text
+class="ascii row"
+x="8"
+y="650"
+style="animation-delay:2.240s"
+>                                                                      </text>
+</svg>

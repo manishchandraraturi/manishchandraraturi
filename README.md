@@ -1,16 +1,54 @@
-## Hi there 👋
+<div align="center">
 
-<!--
-**manishchandraraturi/manishchandraraturi** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<h3>
+<code>manish@github ~ $ ./contributions.sh</code>
+</h3>
 
-Here are some ideas to get you started:
+<img
+src="./contrib-heatmap.svg"
+width="860"
+/>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<br>
+<br>
+
+<h3>
+<code>manish@github ~ $ whoami</code>
+</h3>
+
+<table>
+<tr>
+
+<td valign="top">
+<img
+src="./avi-ascii.svg"
+width="370"
+/>
+</td>
+
+<td valign="top">
+<img
+src="./info-card.svg"
+width="490"
+/>
+</td>
+
+</tr>
+</table>
+
+<br>
+
+<code>manish@github ~ $ echo "building the future"</code>
+
+<br>
+<br>
+
+<a href="https://github.com/manishchandraraturi">
+GitHub
+</a>
+&nbsp;·&nbsp;
+<a href="https://www.linkedin.com/in/manish-raturi-9bb028388/">
+LinkedIn
+</a>
+
+</div>
