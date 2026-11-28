@@ -1,54 +1,29 @@
-<div align="center">
+# The city I built this year
 
-<h3>
-<code>manish@github ~ $ ./contributions.sh</code>
-</h3>
+---
 
-<img
-src="./contrib-heatmap.svg"
-width="860"
-/>
+<p align="center">
+  <img src="./assets/city.svg" alt="Contribution City showing daily GitHub contributions over the last year" width="100%" />
+</p>
 
-<br>
-<br>
+<p align="center"><em>Every building is a day; taller means more contributions.</em></p>
 
-<h3>
-<code>manish@github ~ $ whoami</code>
-</h3>
+<p align="center">
+  <img src="./assets/cartographer.svg" alt="The Cartographer profile card" width="100%" />
+</p>
 
-<table>
-<tr>
+<p align="center">
+  <img src="./assets/galaxy.svg" alt="Repo Galaxy spiral visualization of repositories by language" width="100%" />
+</p>
 
-<td valign="top">
-<img
-src="./avi-ascii.svg"
-width="370"
-/>
-</td>
+<p align="center">25 public repositories, 209 contributions in the last year, a longest streak of 63 days and 1 follower.</p>
 
-<td valign="top">
-<img
-src="./info-card.svg"
-width="490"
-/>
-</td>
+<p align="center">
+  <img src="./assets/solar.svg" alt="Solar System visualization of top languages, repositories, and recent pushes" width="100%" />
+</p>
 
-</tr>
-</table>
-
-<br>
-
-<code>manish@github ~ $ echo "building the future"</code>
-
-<br>
-<br>
-
-<a href="https://github.com/manishchandraraturi">
-GitHub
-</a>
-&nbsp;·&nbsp;
-<a href="https://www.linkedin.com/in/manish-raturi-9bb028388/">
-LinkedIn
-</a>
-
-</div>
+<p align="center">
+  <a href="https://github.com/manishchandraraturi">GitHub</a>
+  &nbsp;·&nbsp;
+  <a href="https://www.linkedin.com/in/manish-raturi-9bb028388/">LinkedIn</a>
+</p>

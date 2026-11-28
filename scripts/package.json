@@ -1,0 +1,19 @@
+{
+  "name": "manishchandraraturi-profile-scripts",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Profile stats fetcher and SVG generators for manishchandraraturi",
+  "scripts": {
+    "fetch": "node fetch-data.js",
+    "city": "node city.js",
+    "cartographer": "node cartographer.js",
+    "galaxy": "node galaxy.js",
+    "solar": "node solar.js",
+    "readme": "node readme.js",
+    "build": "npm run fetch && npm run city && npm run cartographer && npm run galaxy && npm run solar && npm run readme"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2"
+  }
+}
