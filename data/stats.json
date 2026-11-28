@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-28T09:39:20.886Z",
+  "fetchedAt": "2026-11-28T10:19:12.229Z",
   "user": {
     "login": "manishchandraraturi",
     "name": "Manish Chandra Raturi",
@@ -97,13 +97,34 @@
   ],
   "repositories": [
     {
+      "name": "manishchandraraturi",
+      "description": null,
+      "url": "https://github.com/manishchandraraturi/manishchandraraturi",
+      "stars": 0,
+      "forks": 0,
+      "isFork": false,
+      "pushedAt": "2026-11-28T10:18:10Z",
+      "primaryLanguage": {
+        "name": "Python",
+        "color": "#3572A5"
+      },
+      "languages": [
+        {
+          "name": "Python",
+          "color": "#3572A5",
+          "size": 21035,
+          "percentage": 100
+        }
+      ]
+    },
+    {
       "name": "dawaisaathi",
       "description": null,
       "url": "https://github.com/manishchandraraturi/dawaisaathi",
       "stars": 0,
       "forks": 0,
       "isFork": false,
-      "pushedAt": "2026-11-28T06:17:44Z",
+      "pushedAt": "2026-11-28T09:39:27Z",
       "primaryLanguage": {
         "name": "JavaScript",
         "color": "#f1e05a"
@@ -188,27 +209,6 @@
           "color": "#f1e05a",
           "size": 299,
           "percentage": 0.09
-        }
-      ]
-    },
-    {
-      "name": "manishchandraraturi",
-      "description": null,
-      "url": "https://github.com/manishchandraraturi/manishchandraraturi",
-      "stars": 0,
-      "forks": 0,
-      "isFork": false,
-      "pushedAt": "2026-11-27T16:41:10Z",
-      "primaryLanguage": {
-        "name": "Python",
-        "color": "#3572A5"
-      },
-      "languages": [
-        {
-          "name": "Python",
-          "color": "#3572A5",
-          "size": 21035,
-          "percentage": 100
         }
       ]
     },
@@ -907,8 +907,8 @@
     }
   ],
   "contributions": {
-    "totalContributions": 209,
-    "totalCommitContributions": 182,
+    "totalContributions": 212,
+    "totalCommitContributions": 185,
     "totalIssueContributions": 0,
     "totalPullRequestContributions": 2,
     "totalPullRequestReviewContributions": 0,
@@ -3722,7 +3722,7 @@
           },
           {
             "date": "2026-11-28",
-            "contributionCount": 18,
+            "contributionCount": 21,
             "contributionLevel": "FOURTH_QUARTILE",
             "color": "#216e39",
             "weekday": 6
@@ -6323,7 +6323,7 @@
       },
       {
         "date": "2026-11-28",
-        "contributionCount": 18,
+        "contributionCount": 21,
         "contributionLevel": "FOURTH_QUARTILE",
         "color": "#216e39",
         "weekday": 6
