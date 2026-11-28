@@ -277,9 +277,9 @@
         <circle cx="0" cy="0" r="12.6" fill="url(#planet-grad-4)" stroke="#f6eb94" stroke-opacity="0.45" stroke-width="0.7"/>
         <ellipse cx="-4.0" cy="-4.3" rx="3.5" ry="2.0" transform="rotate(-32 -4.0 -4.3)" fill="#ffffff" opacity="0.48"/>
         <g class="moon-orbit" style="animation-duration: 7.0s">
-            <circle cx="-20.4" cy="7.2" r="2.70" fill="#faf4c5" stroke="#060c1f" stroke-width="0.45"/>
+            <circle cx="-20.4" cy="7.2" r="2.35" fill="#faf4c5" stroke="#060c1f" stroke-width="0.45"/>
           </g><g class="moon-orbit" style="animation-duration: 9.4s">
-            <circle cx="-13.2" cy="-17.1" r="2.35" fill="#faf4c5" stroke="#060c1f" stroke-width="0.45"/>
+            <circle cx="-13.2" cy="-17.1" r="2.70" fill="#faf4c5" stroke="#060c1f" stroke-width="0.45"/>
           </g><g class="moon-orbit" style="animation-duration: 11.8s">
             <circle cx="12.2" cy="-17.8" r="2.70" fill="#faf4c5" stroke="#060c1f" stroke-width="0.45"/>
           </g><g class="moon-orbit" style="animation-duration: 14.2s">
@@ -335,8 +335,8 @@
           <circle cx="0" cy="0" r="3.1" fill="#bae6fd"/>
           <circle cx="0" cy="0" r="1.5" fill="#ffffff"/>
           <g transform="rotate(-198)">
-            <text x="-12" y="-7" text-anchor="end" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#040814" stroke="#040814" stroke-width="3.2" stroke-linejoin="round" opacity="0.9">manishchandraraturi</text>
-            <text x="-12" y="-7" text-anchor="end" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#bae6fd">manishchandraraturi</text>
+            <text x="12" y="-7" text-anchor="start" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#040814" stroke="#040814" stroke-width="3.2" stroke-linejoin="round" opacity="0.9">dawaisaathi</text>
+            <text x="12" y="-7" text-anchor="start" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#bae6fd">dawaisaathi</text>
           </g>
         </g>
       </g>
