@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { getLangColor } from './colors.js';
 
 // Edit this list to choose which repositories get bright featured stars & labels
 const FEATURED = [
@@ -120,6 +121,34 @@ function pickStarColor(r, rand) {
   return p < 0.45 ? '#bae6fd' : p < 0.78 ? '#7dd3fc' : p < 0.92 ? '#e0f2fe' : '#93c5fd';
 }
 
+// Batch stars into compact round-cap SVG <path> strokes by (color, width, opacity)
+function batchStarEntries(entries) {
+  const groups = new Map();
+  for (const s of entries) {
+    const key = `${s.fill}|${s.w}|${s.op}`;
+    let d = groups.get(key);
+    if (!d) {
+      d = [];
+      groups.set(key, d);
+    }
+    d.push(`M${s.x} ${s.y}h.01`);
+  }
+  const out = [];
+  for (const [key, segments] of groups.entries()) {
+    const [fill, w, op] = key.split('|');
+    out.push(`<path d="${segments.join('')}" stroke="${fill}" stroke-width="${w}" stroke-linecap="round" fill="none" opacity="${op}"/>`);
+  }
+  return out.join('');
+}
+
+function quantizeStarOp(rawOp) {
+  return rawOp < 0.48 ? '.35' : '.75';
+}
+
+function quantizeStarWidth(r) {
+  return r < 0.62 ? '1' : r < 1.05 ? '1.6' : '2.4';
+}
+
 // 3 parallax field star layers (far, mid, near) with different twinkle speeds
 function buildParallaxFieldStars() {
   const rand = mulberry32(8421);
@@ -131,11 +160,13 @@ function buildParallaxFieldStars() {
 
   layers.forEach((layer, lIdx) => {
     for (let i = 0; i < layer.count; i++) {
-      const x = (8 + rand() * (WIDTH - 16)).toFixed(1);
-      const y = (8 + rand() * (HEIGHT - 16)).toFixed(1);
-      const r = (layer.minR + Math.pow(rand(), 1.8) * (layer.maxR - layer.minR)).toFixed(2);
-      const op = (layer.minOp + rand() * (layer.maxOp - layer.minOp)).toFixed(2);
-      const color =
+      const x = Math.round(8 + rand() * (WIDTH - 16));
+      const y = Math.round(8 + rand() * (HEIGHT - 16));
+      const r = layer.minR + Math.pow(rand(), 1.8) * (layer.maxR - layer.minR);
+      const w = quantizeStarWidth(r);
+      const rawOp = layer.minOp + rand() * (layer.maxOp - layer.minOp);
+      const op = quantizeStarOp(rawOp);
+      const fill =
         lIdx === 2
           ? i % 3 === 0
             ? '#e0f2fe'
@@ -147,15 +178,14 @@ function buildParallaxFieldStars() {
             : i % 11 === 0
               ? '#c7d2fe'
               : '#e2e8f0';
-      const star = `<circle cx="${x}" cy="${y}" r="${r}" fill="${color}" opacity="${op}"/>`;
-      layer.buckets[i % 3].push(star);
+      layer.buckets[i % 3].push({ x, y, w, op, fill });
     }
   });
 
   return layers
     .map((layer) =>
       layer.buckets
-        .map((stars, bIdx) => `<g class="${layer.cls}-${bIdx + 1}">${stars.join('')}</g>`)
+        .map((stars, bIdx) => `<g class="${layer.cls}-${bIdx + 1}">${batchStarEntries(stars)}</g>`)
         .join('')
     )
     .join('\n    ');
@@ -253,12 +283,11 @@ function generateGalacticLayers() {
     const y = gaussianRand(rand) * (15 - Math.abs(along) * 6);
     const r = Math.hypot(x, y);
     const ringIdx = getRingIndex(r);
-    const size = (0.35 + Math.pow(rand(), 2.2) * 1.15).toFixed(2);
-    const op = (0.28 + rand() * 0.65).toFixed(2);
+    const size = 0.35 + Math.pow(rand(), 2.2) * 1.15;
+    const w = quantizeStarWidth(size);
+    const op = quantizeStarOp(0.28 + rand() * 0.65);
     const fill = pickStarColor(r, rand);
-    ringData[ringIdx].stars.push(
-      `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${size}" fill="${fill}" opacity="${op}"/>`
-    );
+    ringData[ringIdx].stars.push({ x: Math.round(x), y: Math.round(y), w, op, fill });
   }
 
   // Spiral arm stars (~1,180)
@@ -274,15 +303,16 @@ function generateGalacticLayers() {
     const x = Math.cos(theta) * rJitter;
     const y = Math.sin(theta) * rJitter;
     const ringIdx = getRingIndex(rJitter);
-    const size = (0.35 + Math.pow(rand(), 2.3) * 1.35).toFixed(2);
-    const op = (0.22 + rand() * 0.72).toFixed(2);
+    const size = 0.35 + Math.pow(rand(), 2.3) * 1.35;
+    const w = quantizeStarWidth(size);
+    const op = quantizeStarOp(0.22 + rand() * 0.72);
     const fill = pickStarColor(rJitter, rand);
-    const circle = `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${size}" fill="${fill}" opacity="${op}"/>`;
+    const entry = { x: Math.round(x), y: Math.round(y), w, op, fill };
 
     if (i % 25 === 0) {
-      ringData[ringIdx].twinkleBuckets[i % 4].push(circle);
+      ringData[ringIdx].twinkleBuckets[i % 4].push(entry);
     } else {
-      ringData[ringIdx].stars.push(circle);
+      ringData[ringIdx].stars.push(entry);
     }
   }
 
@@ -293,12 +323,11 @@ function generateGalacticLayers() {
     const x = Math.cos(theta) * r;
     const y = Math.sin(theta) * r;
     const ringIdx = getRingIndex(r);
-    const size = (0.3 + rand() * 0.85).toFixed(2);
-    const op = (0.12 + rand() * 0.36).toFixed(2);
+    const size = 0.3 + rand() * 0.85;
+    const w = quantizeStarWidth(size);
+    const op = quantizeStarOp(0.12 + rand() * 0.36);
     const fill = pickStarColor(r, rand);
-    ringData[ringIdx].stars.push(
-      `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${size}" fill="${fill}" opacity="${op}"/>`
-    );
+    ringData[ringIdx].stars.push({ x: Math.round(x), y: Math.round(y), w, op, fill });
   }
 
   return ringData;
@@ -324,7 +353,9 @@ function makeAsteroidSvg(cx, cy, baseR, rand, toneIdx) {
 
 function buildAsteroidBelt() {
   const rand = mulberry32(55109);
-  const rocks = [];
+  const fills = ['#78716c', '#64748b', '#8b735b', '#57534e', '#71717a', '#9a8470'];
+  const polyByFill = new Map(fills.map((f) => [f, []]));
+  const hlSegments = [];
   const count = 92;
 
   for (let i = 0; i < count; i++) {
@@ -333,10 +364,26 @@ function buildAsteroidBelt() {
     const cx = Math.cos(angle) * radius;
     const cy = Math.sin(angle) * radius;
     const size = 1.3 + rand() * 1.9;
-    rocks.push(makeAsteroidSvg(cx, cy, size, rand, i));
+    const vertices = 5 + (i % 3);
+    const pts = [];
+    const rotOffset = rand() * Math.PI * 2;
+    for (let v = 0; v < vertices; v++) {
+      const a = rotOffset + (v * Math.PI * 2) / vertices + (rand() - 0.5) * 0.28;
+      const rr = size * (0.68 + rand() * 0.52);
+      pts.push([Math.round(cx + Math.cos(a) * rr), Math.round(cy + Math.sin(a) * rr)]);
+    }
+    const fill = fills[i % fills.length];
+    polyByFill.get(fill).push(
+      `M${pts[0][0]} ${pts[0][1]}${pts.slice(1).map(([px, py]) => `L${px} ${py}`).join('')}Z`
+    );
+    hlSegments.push(`M${pts[0][0]} ${pts[0][1]}L${pts[1][0]} ${pts[1][1]}L${pts[2][0]} ${pts[2][1]}`);
   }
 
-  return `<g class="asteroid-belt">${rocks.join('')}</g>`;
+  const rockPaths = Array.from(polyByFill.entries())
+    .map(([fill, dList]) => `<path d="${dList.join('')}" fill="${fill}"/>`)
+    .join('');
+
+  return `<g class="asteroid-belt">${rockPaths}<path d="${hlSegments.join('')}" fill="none" stroke="#e2e8f0" stroke-width=".55" stroke-opacity=".5" stroke-linecap="round"/></g>`;
 }
 
 function buildDriftingRocks() {
@@ -481,7 +528,7 @@ function layoutRepoStars(scoredRepos, topLanguages) {
         theta,
         screen,
         ringIdx: getRingIndex(r),
-        color: item.repo.primaryLanguage?.color || '#cbd5e1',
+        color: getLangColor(item.repo.primaryLanguage?.name, item.repo.primaryLanguage?.color),
       });
     });
 
@@ -502,7 +549,7 @@ function layoutRepoStars(scoredRepos, topLanguages) {
         theta,
         screen,
         ringIdx: getRingIndex(r),
-        color: item.repo.primaryLanguage?.color || '#cbd5e1',
+        color: getLangColor(item.repo.primaryLanguage?.name, item.repo.primaryLanguage?.color),
       });
     });
   });
@@ -646,7 +693,7 @@ export function renderGalaxySvg(stats) {
 
     const twinkles = data.twinkleBuckets
       .map((bucket, bIdx) =>
-        bucket.length ? `<g class="tw tw${bIdx + 1}">${bucket.join('')}</g>` : ''
+        bucket.length ? `<g class="tw tw${bIdx + 1}">${batchStarEntries(bucket)}</g>` : ''
       )
       .join('');
 
@@ -654,7 +701,7 @@ export function renderGalaxySvg(stats) {
       <g filter="url(#blur-nebula)">${data.clouds.join('')}${data.nebulae.join('')}</g>
       <g filter="url(#blur-dust)">${data.dust.join('')}</g>
       ${coreElements}
-      <g>${data.stars.join('')}</g>
+      <g>${batchStarEntries(data.stars)}</g>
       ${twinkles}
       <g>${repoGroupsByRing[idx].join('')}</g>
     </g>`;
@@ -668,9 +715,10 @@ export function renderGalaxySvg(stats) {
   const legendItems = topLanguages
     .map((lang, idx) => {
       const y = 224 + idx * 28;
+      const color = getLangColor(lang.name, lang.color);
       return `
       <g>
-        <circle cx="44" cy="${y - 4}" r="5" fill="${escapeXml(lang.color || '#94a3b8')}"/>
+        <circle cx="44" cy="${y - 4}" r="5" fill="${escapeXml(color)}"/>
         <text x="58" y="${y}" font-size="13" font-weight="600" fill="#e2e8f0">${escapeXml(lang.name)}</text>
         <text x="230" y="${y}" text-anchor="end" font-family="${fontMono}" font-size="12" fill="#94a3b8">${escapeXml(lang.percentage.toFixed(1))}%</text>
       </g>`;

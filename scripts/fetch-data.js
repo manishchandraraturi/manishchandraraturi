@@ -60,6 +60,7 @@ const USER_QUERY = `
         totalIssueContributions
         totalPullRequestContributions
         totalPullRequestReviewContributions
+        totalRepositoryContributions
         restrictedContributionsCount
         contributionCalendar {
           totalContributions
@@ -243,6 +244,8 @@ async function fetchAllData(token, login) {
         contributionsCollection?.totalPullRequestContributions ?? 0,
       totalPullRequestReviewContributions:
         contributionsCollection?.totalPullRequestReviewContributions ?? 0,
+      totalRepositoryContributions:
+        contributionsCollection?.totalRepositoryContributions ?? 0,
       restrictedContributionsCount:
         contributionsCollection?.restrictedContributionsCount ?? 0,
       activeDays: calendarStats.activeDays,

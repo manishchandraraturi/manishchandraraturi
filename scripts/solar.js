@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { getLangColor } from './colors.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT_DIR = path.resolve(__dirname, '..');
@@ -303,7 +304,7 @@ function buildPlanetsAndMoons(topLanguages, repositories) {
 
   const planetGradients = topLanguages
     .map((lang, idx) => {
-      const color = lang.color || '#38bdf8';
+      const color = getLangColor(lang.name, lang.color);
       const highlight = tintWhiteHex(color, 0.58);
       const midDark = shadeHex(color, 0.56);
       const deepDark = shadeHex(color, 0.25);
@@ -338,7 +339,7 @@ function buildPlanetsAndMoons(topLanguages, repositories) {
 
   const planetSpecs = topLanguages.map((lang, idx) => {
     const slot = ORBIT_SLOTS[idx];
-    const color = lang.color || '#38bdf8';
+    const color = getLangColor(lang.name, lang.color);
     const norm = (lang.percentage || 0) / maxPct;
     const planetR = Number((9.5 + Math.pow(norm, 0.72) * 10.5).toFixed(1));
     const rad = (slot.angleDeg * Math.PI) / 180;

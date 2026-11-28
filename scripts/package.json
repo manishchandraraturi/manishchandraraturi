@@ -6,14 +6,24 @@
   "description": "Profile stats fetcher and SVG generators for manishchandraraturi",
   "scripts": {
     "fetch": "node fetch-data.js",
+    "hero": "node hero.js",
+    "headers": "node headers.js",
+    "about": "node about.js",
     "city": "node city.js",
     "cartographer": "node cartographer.js",
     "galaxy": "node galaxy.js",
+    "stack": "node stack.js",
     "solar": "node solar.js",
+    "buttons": "node buttons.js",
+    "footer": "node footer.js",
     "readme": "node readme.js",
-    "build": "npm run fetch && npm run city && npm run cartographer && npm run galaxy && npm run solar && npm run readme"
+    "build": "npm run fetch && npm run hero && npm run headers && npm run about && npm run city && npm run cartographer && npm run galaxy && npm run stack && npm run solar && npm run buttons && npm run footer && npm run readme"
   },
   "devDependencies": {
-    "@resvg/resvg-js": "^2.6.2"
+    "@fontsource/fredoka": "^5.3.0",
+    "@fontsource/nunito": "^5.3.0",
+    "@resvg/resvg-js": "^2.6.2",
+    "opentype.js": "^2.0.0",
+    "sharp": "^0.35.5"
   }
 }

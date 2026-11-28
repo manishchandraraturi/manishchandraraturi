@@ -1,11 +1,13 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import sharp from 'sharp';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT_DIR = path.resolve(__dirname, '..');
 const INPUT_PATH = path.join(ROOT_DIR, 'data', 'stats.json');
 const OUTPUT_PATH = path.join(ROOT_DIR, 'assets', 'cartographer.svg');
+const AVATAR_CACHE_PATH = path.join(ROOT_DIR, 'assets', 'avatar.png');
 
 const WIDTH = 900;
 const HEIGHT = 300;
@@ -28,16 +30,34 @@ function pluralize(count, singular, plural = `${singular}s`) {
 }
 
 async function fetchAvatarDataUri(avatarUrl) {
-  if (!avatarUrl) return null;
-  const response = await fetch(avatarUrl, {
-    headers: { 'User-Agent': 'manishchandraraturi-profile-scripts' },
-  });
-  if (!response.ok) {
-    throw new Error(`Failed to fetch avatar (${response.status}): ${avatarUrl}`);
+  if (avatarUrl) {
+    try {
+      const response = await fetch(avatarUrl, {
+        headers: { 'User-Agent': 'manishchandraraturi-profile-scripts' },
+      });
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+      const rawBuffer = Buffer.from(await response.arrayBuffer());
+      const pngBuffer = await sharp(rawBuffer)
+        .resize({ width: 280, withoutEnlargement: true })
+        .png({ compressionLevel: 9, palette: true, quality: 86, effort: 10 })
+        .toBuffer();
+      await fs.mkdir(path.dirname(AVATAR_CACHE_PATH), { recursive: true });
+      await fs.writeFile(AVATAR_CACHE_PATH, pngBuffer);
+      return `data:image/png;base64,${pngBuffer.toString('base64')}`;
+    } catch (err) {
+      console.warn(`Avatar fetch failed (${err.message || err}); falling back to ${AVATAR_CACHE_PATH}`);
+    }
   }
-  const contentType = response.headers.get('content-type')?.split(';')[0].trim() || 'image/png';
-  const buffer = Buffer.from(await response.arrayBuffer());
-  return `data:${contentType};base64,${buffer.toString('base64')}`;
+
+  try {
+    const cached = await fs.readFile(AVATAR_CACHE_PATH);
+    return `data:image/png;base64,${cached.toString('base64')}`;
+  } catch {
+    console.warn('No cached avatar.png found; rendering card without photo.');
+    return null;
+  }
 }
 
 function buildCompassSvg(cx, cy) {

@@ -109,20 +109,20 @@
       <stop offset="100%" stop-color="#0c1e32"/>
     </radialGradient>
     <radialGradient id="planet-grad-1" cx="34%" cy="30%" r="70%">
-      <stop offset="0%" stop-color="#aac4d9"/>
-      <stop offset="35%" stop-color="#3572A5"/>
-      <stop offset="78%" stop-color="#1e405c"/>
-      <stop offset="100%" stop-color="#0d1d29"/>
+      <stop offset="0%" stop-color="#9ce1da"/>
+      <stop offset="35%" stop-color="#14b8a6"/>
+      <stop offset="78%" stop-color="#0b675d"/>
+      <stop offset="100%" stop-color="#052e2a"/>
     </radialGradient>
     <radialGradient id="planet-grad-2" cx="34%" cy="30%" r="70%">
-      <stop offset="0%" stop-color="#efba99"/>
-      <stop offset="35%" stop-color="#DA5B0B"/>
-      <stop offset="78%" stop-color="#7a3306"/>
-      <stop offset="100%" stop-color="#371703"/>
+      <stop offset="0%" stop-color="#fcc49d"/>
+      <stop offset="35%" stop-color="#f97316"/>
+      <stop offset="78%" stop-color="#8b400c"/>
+      <stop offset="100%" stop-color="#3e1d06"/>
     </radialGradient>
     <radialGradient id="planet-grad-3" cx="34%" cy="30%" r="70%">
       <stop offset="0%" stop-color="#dbc8ff"/>
-      <stop offset="35%" stop-color="#A97BFF"/>
+      <stop offset="35%" stop-color="#a97bff"/>
       <stop offset="78%" stop-color="#5f458f"/>
       <stop offset="100%" stop-color="#2a1f40"/>
     </radialGradient>
@@ -133,10 +133,10 @@
       <stop offset="100%" stop-color="#3c3817"/>
     </radialGradient>
     <radialGradient id="planet-grad-5" cx="34%" cy="30%" r="70%">
-      <stop offset="0%" stop-color="#f3b4a4"/>
-      <stop offset="35%" stop-color="#e34c26"/>
-      <stop offset="78%" stop-color="#7f2b15"/>
-      <stop offset="100%" stop-color="#39130a"/>
+      <stop offset="0%" stop-color="#f7b2d4"/>
+      <stop offset="35%" stop-color="#ec4899"/>
+      <stop offset="78%" stop-color="#842856"/>
+      <stop offset="100%" stop-color="#3b1226"/>
     </radialGradient>
     <filter id="blur-glow" x="-120%" y="-120%" width="340%" height="340%">
       <feGaussianBlur stdDeviation="4"/>
@@ -205,51 +205,49 @@
     </g>
     <g class="planet-orbit-1">
       <g transform="translate(344.8, 369.7)">
-        <circle cx="0" cy="0" r="25.8" fill="none" stroke="#3572A5" stroke-opacity="0.22" stroke-width="0.7"/><circle cx="0" cy="0" r="32.8" fill="none" stroke="#3572A5" stroke-opacity="0.16" stroke-width="0.6"/>
-        <circle cx="0" cy="0" r="27.7" fill="#3572A5" opacity="0.22" filter="url(#blur-glow)"/>
-        <circle cx="0" cy="0" r="16.8" fill="url(#planet-grad-1)" stroke="#7ca3c5" stroke-opacity="0.45" stroke-width="0.7"/>
+        <circle cx="0" cy="0" r="25.8" fill="none" stroke="#14b8a6" stroke-opacity="0.22" stroke-width="0.7"/><circle cx="0" cy="0" r="32.8" fill="none" stroke="#14b8a6" stroke-opacity="0.16" stroke-width="0.6"/>
+        <circle cx="0" cy="0" r="27.7" fill="#14b8a6" opacity="0.22" filter="url(#blur-glow)"/>
+        <circle cx="0" cy="0" r="16.8" fill="url(#planet-grad-1)" stroke="#66d1c5" stroke-opacity="0.45" stroke-width="0.7"/>
         <ellipse cx="-5.4" cy="-5.7" rx="4.7" ry="2.7" transform="rotate(-32 -5.4 -5.7)" fill="#ffffff" opacity="0.48"/>
         <g class="moon-orbit" style="animation-duration: 7.0s">
-            <circle cx="19.7" cy="16.6" r="2.35" fill="#b8cee0" stroke="#060c1f" stroke-width="0.45"/>
+            <circle cx="19.7" cy="16.6" r="2.00" fill="#ade6e0" stroke="#060c1f" stroke-width="0.45"/>
           </g><g class="moon-orbit" style="animation-duration: 12.9s">
-            <circle cx="7.9" cy="31.8" r="2.00" fill="#b8cee0" stroke="#060c1f" stroke-width="0.45"/>
+            <circle cx="5.6" cy="32.3" r="2.35" fill="#ade6e0" stroke="#060c1f" stroke-width="0.45"/>
           </g><g class="moon-orbit" style="animation-duration: 11.8s">
-            <circle cx="-9.7" cy="23.9" r="2.35" fill="#b8cee0" stroke="#060c1f" stroke-width="0.45"/>
+            <circle cx="-12.9" cy="22.3" r="2.35" fill="#ade6e0" stroke="#060c1f" stroke-width="0.45"/>
           </g><g class="moon-orbit" style="animation-duration: 17.7s">
-            <circle cx="-27.8" cy="17.3" r="2.35" fill="#b8cee0" stroke="#060c1f" stroke-width="0.45"/>
+            <circle cx="-30.8" cy="11.2" r="2.00" fill="#ade6e0" stroke="#060c1f" stroke-width="0.45"/>
           </g><g class="moon-orbit" style="animation-duration: 16.6s">
-            <circle cx="-25.7" cy="-1.8" r="2.00" fill="#b8cee0" stroke="#060c1f" stroke-width="0.45"/>
+            <circle cx="-24.2" cy="-8.9" r="2.35" fill="#ade6e0" stroke="#060c1f" stroke-width="0.45"/>
           </g><g class="moon-orbit" style="animation-duration: 10.5s">
-            <circle cx="-25.1" cy="-21.1" r="2.35" fill="#b8cee0" stroke="#060c1f" stroke-width="0.45"/>
+            <circle cx="-16.3" cy="-28.4" r="2.70" fill="#ade6e0" stroke="#060c1f" stroke-width="0.45"/>
           </g><g class="moon-orbit" style="animation-duration: 9.4s">
-            <circle cx="-6.2" cy="-25.0" r="2.70" fill="#b8cee0" stroke="#060c1f" stroke-width="0.45"/>
+            <circle cx="4.5" cy="-25.4" r="2.35" fill="#ade6e0" stroke="#060c1f" stroke-width="0.45"/>
           </g><g class="moon-orbit" style="animation-duration: 15.3s">
-            <circle cx="12.3" cy="-30.4" r="2.35" fill="#b8cee0" stroke="#060c1f" stroke-width="0.45"/>
+            <circle cx="25.2" cy="-21.0" r="2.35" fill="#ade6e0" stroke="#060c1f" stroke-width="0.45"/>
           </g><g class="moon-orbit" style="animation-duration: 14.2s">
-            <circle cx="21.9" cy="-13.6" r="2.35" fill="#b8cee0" stroke="#060c1f" stroke-width="0.45"/>
-          </g><g class="moon-orbit" style="animation-duration: 20.1s">
-            <circle cx="32.7" cy="2.3" r="2.70" fill="#b8cee0" stroke="#060c1f" stroke-width="0.45"/>
+            <circle cx="25.8" cy="0.0" r="2.70" fill="#ade6e0" stroke="#060c1f" stroke-width="0.45"/>
           </g>
         <g class="planet-counter-1">
-          <rect x="-46.0" y="40.8" width="24.0" height="15" rx="5" fill="#070d1f" fill-opacity="0.92" stroke="#3572A5" stroke-width="1.1"/>
-          <text x="-34.0" y="51.8" text-anchor="middle" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="9.2" font-weight="700" fill="#90b1ce">PY</text>
-          <text x="-16.0" y="51.8" text-anchor="start" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#040814" stroke="#040814" stroke-width="3.2" stroke-linejoin="round" opacity="0.9">Python 22%</text>
-          <text x="-16.0" y="51.8" text-anchor="start" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#e2e8f0">Python 22%</text>
+          <rect x="-46.0" y="40.8" width="24.0" height="15" rx="5" fill="#070d1f" fill-opacity="0.92" stroke="#14b8a6" stroke-width="1.1"/>
+          <text x="-34.0" y="51.8" text-anchor="middle" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="9.2" font-weight="700" fill="#7ed8ce">PY</text>
+          <text x="-16.0" y="51.8" text-anchor="start" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#040814" stroke="#040814" stroke-width="3.2" stroke-linejoin="round" opacity="0.9">Python 21%</text>
+          <text x="-16.0" y="51.8" text-anchor="start" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#e2e8f0">Python 21%</text>
         </g>
       </g>
     </g>
     <g class="planet-orbit-2">
       <g transform="translate(582.3, 386.7)">
-        <circle cx="0" cy="0" r="24.1" fill="none" stroke="#DA5B0B" stroke-opacity="0.22" stroke-width="0.7"/>
-        <circle cx="0" cy="0" r="24.9" fill="#DA5B0B" opacity="0.22" filter="url(#blur-glow)"/>
-        <circle cx="0" cy="0" r="15.1" fill="url(#planet-grad-2)" stroke="#e79460" stroke-opacity="0.45" stroke-width="0.7"/>
+        <circle cx="0" cy="0" r="24.1" fill="none" stroke="#f97316" stroke-opacity="0.22" stroke-width="0.7"/>
+        <circle cx="0" cy="0" r="24.9" fill="#f97316" opacity="0.22" filter="url(#blur-glow)"/>
+        <circle cx="0" cy="0" r="15.1" fill="url(#planet-grad-2)" stroke="#fba468" stroke-opacity="0.45" stroke-width="0.7"/>
         <ellipse cx="-4.8" cy="-5.1" rx="4.2" ry="2.4" transform="rotate(-32 -4.8 -5.1)" fill="#ffffff" opacity="0.48"/>
         <g class="moon-orbit" style="animation-duration: 7.0s">
-            <circle cx="4.1" cy="23.7" r="2.35" fill="#f2c6aa" stroke="#060c1f" stroke-width="0.45"/>
+            <circle cx="4.1" cy="23.7" r="2.35" fill="#fdcead" stroke="#060c1f" stroke-width="0.45"/>
           </g>
         <g class="planet-counter-2">
-          <rect x="-87.0" y="32.1" width="44.0" height="15" rx="5" fill="#070d1f" fill-opacity="0.92" stroke="#DA5B0B" stroke-width="1.1"/>
-          <text x="-65.0" y="43.1" text-anchor="middle" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="9.2" font-weight="700" fill="#eba579">IPYNB</text>
+          <rect x="-87.0" y="32.1" width="44.0" height="15" rx="5" fill="#070d1f" fill-opacity="0.92" stroke="#f97316" stroke-width="1.1"/>
+          <text x="-65.0" y="43.1" text-anchor="middle" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="9.2" font-weight="700" fill="#fcb27f">IPYNB</text>
           <text x="-37.0" y="43.1" text-anchor="start" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#040814" stroke="#040814" stroke-width="3.2" stroke-linejoin="round" opacity="0.9">Jupyter Notebook 15%</text>
           <text x="-37.0" y="43.1" text-anchor="start" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#e2e8f0">Jupyter Notebook 15%</text>
         </g>
@@ -257,56 +255,58 @@
     </g>
     <g class="planet-orbit-3">
       <g transform="translate(275.3, 194.8)">
-        <circle cx="0" cy="0" r="23.6" fill="none" stroke="#A97BFF" stroke-opacity="0.22" stroke-width="0.7"/>
-        <circle cx="0" cy="0" r="24.1" fill="#A97BFF" opacity="0.22" filter="url(#blur-glow)"/>
-        <circle cx="0" cy="0" r="14.6" fill="url(#planet-grad-3)" stroke="#c7a9ff" stroke-opacity="0.45" stroke-width="0.7"/>
-        <ellipse cx="-4.7" cy="-5.0" rx="4.1" ry="2.3" transform="rotate(-32 -4.7 -5.0)" fill="#ffffff" opacity="0.48"/>
+        <circle cx="0" cy="0" r="23.7" fill="none" stroke="#a97bff" stroke-opacity="0.22" stroke-width="0.7"/>
+        <circle cx="0" cy="0" r="24.3" fill="#a97bff" opacity="0.22" filter="url(#blur-glow)"/>
+        <circle cx="0" cy="0" r="14.7" fill="url(#planet-grad-3)" stroke="#c7a9ff" stroke-opacity="0.45" stroke-width="0.7"/>
+        <ellipse cx="-4.7" cy="-5.0" rx="4.1" ry="2.4" transform="rotate(-32 -4.7 -5.0)" fill="#ffffff" opacity="0.48"/>
         <g class="moon-orbit" style="animation-duration: 7.0s">
-            <circle cx="-11.9" cy="20.4" r="2.35" fill="#e1d1ff" stroke="#060c1f" stroke-width="0.45"/>
+            <circle cx="-12.0" cy="20.5" r="2.35" fill="#e1d1ff" stroke="#060c1f" stroke-width="0.45"/>
           </g>
         <g class="planet-counter-3">
-          <rect x="-46.0" y="31.6" width="24.0" height="15" rx="5" fill="#070d1f" fill-opacity="0.92" stroke="#A97BFF" stroke-width="1.1"/>
-          <text x="-34.0" y="42.6" text-anchor="middle" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="9.2" font-weight="700" fill="#d0b6ff">KT</text>
-          <text x="-16.0" y="42.6" text-anchor="start" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#040814" stroke="#040814" stroke-width="3.2" stroke-linejoin="round" opacity="0.9">Kotlin 13%</text>
-          <text x="-16.0" y="42.6" text-anchor="start" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#e2e8f0">Kotlin 13%</text>
+          <rect x="-46.0" y="31.7" width="24.0" height="15" rx="5" fill="#070d1f" fill-opacity="0.92" stroke="#a97bff" stroke-width="1.1"/>
+          <text x="-34.0" y="42.7" text-anchor="middle" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="9.2" font-weight="700" fill="#d0b6ff">KT</text>
+          <text x="-16.0" y="42.7" text-anchor="start" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#040814" stroke="#040814" stroke-width="3.2" stroke-linejoin="round" opacity="0.9">Kotlin 13%</text>
+          <text x="-16.0" y="42.7" text-anchor="start" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#e2e8f0">Kotlin 13%</text>
         </g>
       </g>
     </g>
     <g class="planet-orbit-4">
       <g transform="translate(680.8, 254.9)">
-        <circle cx="0" cy="0" r="21.3" fill="none" stroke="#f1e05a" stroke-opacity="0.22" stroke-width="0.7"/>
-        <circle cx="0" cy="0" r="20.3" fill="#f1e05a" opacity="0.22" filter="url(#blur-glow)"/>
-        <circle cx="0" cy="0" r="12.3" fill="url(#planet-grad-4)" stroke="#f6eb94" stroke-opacity="0.45" stroke-width="0.7"/>
-        <ellipse cx="-3.9" cy="-4.2" rx="3.4" ry="2.0" transform="rotate(-32 -3.9 -4.2)" fill="#ffffff" opacity="0.48"/>
+        <circle cx="0" cy="0" r="21.6" fill="none" stroke="#f1e05a" stroke-opacity="0.22" stroke-width="0.7"/>
+        <circle cx="0" cy="0" r="20.8" fill="#f1e05a" opacity="0.22" filter="url(#blur-glow)"/>
+        <circle cx="0" cy="0" r="12.6" fill="url(#planet-grad-4)" stroke="#f6eb94" stroke-opacity="0.45" stroke-width="0.7"/>
+        <ellipse cx="-4.0" cy="-4.3" rx="3.5" ry="2.0" transform="rotate(-32 -4.0 -4.3)" fill="#ffffff" opacity="0.48"/>
         <g class="moon-orbit" style="animation-duration: 7.0s">
-            <circle cx="-20.1" cy="7.1" r="2.70" fill="#faf4c5" stroke="#060c1f" stroke-width="0.45"/>
+            <circle cx="-20.4" cy="7.2" r="2.70" fill="#faf4c5" stroke="#060c1f" stroke-width="0.45"/>
           </g><g class="moon-orbit" style="animation-duration: 9.4s">
-            <circle cx="-7.1" cy="-20.1" r="2.70" fill="#faf4c5" stroke="#060c1f" stroke-width="0.45"/>
+            <circle cx="-13.2" cy="-17.1" r="2.35" fill="#faf4c5" stroke="#060c1f" stroke-width="0.45"/>
           </g><g class="moon-orbit" style="animation-duration: 11.8s">
-            <circle cx="20.1" cy="-7.1" r="2.70" fill="#faf4c5" stroke="#060c1f" stroke-width="0.45"/>
+            <circle cx="12.2" cy="-17.8" r="2.70" fill="#faf4c5" stroke="#060c1f" stroke-width="0.45"/>
           </g><g class="moon-orbit" style="animation-duration: 14.2s">
-            <circle cx="7.1" cy="20.1" r="2.70" fill="#faf4c5" stroke="#060c1f" stroke-width="0.45"/>
+            <circle cx="20.7" cy="6.1" r="2.70" fill="#faf4c5" stroke="#060c1f" stroke-width="0.45"/>
+          </g><g class="moon-orbit" style="animation-duration: 16.6s">
+            <circle cx="0.6" cy="21.6" r="2.70" fill="#faf4c5" stroke="#060c1f" stroke-width="0.45"/>
           </g>
         <g class="planet-counter-4">
-          <rect x="-55.3" y="29.3" width="24.0" height="15" rx="5" fill="#070d1f" fill-opacity="0.92" stroke="#f1e05a" stroke-width="1.1"/>
-          <text x="-43.3" y="40.3" text-anchor="middle" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="9.2" font-weight="700" fill="#f7eea4">JS</text>
-          <text x="-25.3" y="40.3" text-anchor="start" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#040814" stroke="#040814" stroke-width="3.2" stroke-linejoin="round" opacity="0.9">JavaScript 6%</text>
-          <text x="-25.3" y="40.3" text-anchor="start" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#e2e8f0">JavaScript 6%</text>
+          <rect x="-55.3" y="29.6" width="24.0" height="15" rx="5" fill="#070d1f" fill-opacity="0.92" stroke="#f1e05a" stroke-width="1.1"/>
+          <text x="-43.3" y="40.6" text-anchor="middle" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="9.2" font-weight="700" fill="#f7eea4">JS</text>
+          <text x="-25.3" y="40.6" text-anchor="start" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#040814" stroke="#040814" stroke-width="3.2" stroke-linejoin="round" opacity="0.9">JavaScript 7%</text>
+          <text x="-25.3" y="40.6" text-anchor="start" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#e2e8f0">JavaScript 7%</text>
         </g>
       </g>
     </g>
     <g class="planet-orbit-5">
       <g transform="translate(188.6, 340.7)">
-        <circle cx="0" cy="0" r="21.1" fill="none" stroke="#e34c26" stroke-opacity="0.22" stroke-width="0.7"/>
-        <circle cx="0" cy="0" r="20.0" fill="#e34c26" opacity="0.22" filter="url(#blur-glow)"/>
-        <circle cx="0" cy="0" r="12.1" fill="url(#planet-grad-5)" stroke="#ed8b72" stroke-opacity="0.45" stroke-width="0.7"/>
+        <circle cx="0" cy="0" r="21.1" fill="none" stroke="#ec4899" stroke-opacity="0.22" stroke-width="0.7"/>
+        <circle cx="0" cy="0" r="20.0" fill="#ec4899" opacity="0.22" filter="url(#blur-glow)"/>
+        <circle cx="0" cy="0" r="12.1" fill="url(#planet-grad-5)" stroke="#f388bd" stroke-opacity="0.45" stroke-width="0.7"/>
         <ellipse cx="-3.9" cy="-4.1" rx="3.4" ry="1.9" transform="rotate(-32 -3.9 -4.1)" fill="#ffffff" opacity="0.48"/>
         <g class="moon-orbit" style="animation-duration: 7.0s">
-            <circle cx="-19.8" cy="-7.4" r="2.35" fill="#f5c0b3" stroke="#060c1f" stroke-width="0.45"/>
+            <circle cx="-19.8" cy="-7.4" r="2.35" fill="#f8bfdb" stroke="#060c1f" stroke-width="0.45"/>
           </g>
         <g class="planet-counter-5">
-          <rect x="-43.3" y="29.1" width="37.2" height="15" rx="5" fill="#070d1f" fill-opacity="0.92" stroke="#e34c26" stroke-width="1.1"/>
-          <text x="-24.7" y="40.1" text-anchor="middle" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="9.2" font-weight="700" fill="#f09d88">HTML</text>
+          <rect x="-43.3" y="29.1" width="37.2" height="15" rx="5" fill="#070d1f" fill-opacity="0.92" stroke="#ec4899" stroke-width="1.1"/>
+          <text x="-24.7" y="40.1" text-anchor="middle" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="9.2" font-weight="700" fill="#f59ac7">HTML</text>
           <text x="-0.1" y="40.1" text-anchor="start" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#040814" stroke="#040814" stroke-width="3.2" stroke-linejoin="round" opacity="0.9">HTML 5%</text>
           <text x="-0.1" y="40.1" text-anchor="start" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#e2e8f0">HTML 5%</text>
         </g>
@@ -335,8 +335,8 @@
           <circle cx="0" cy="0" r="3.1" fill="#bae6fd"/>
           <circle cx="0" cy="0" r="1.5" fill="#ffffff"/>
           <g transform="rotate(-198)">
-            <text x="12" y="-7" text-anchor="start" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#040814" stroke="#040814" stroke-width="3.2" stroke-linejoin="round" opacity="0.9">dawaisaathi</text>
-            <text x="12" y="-7" text-anchor="start" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#bae6fd">dawaisaathi</text>
+            <text x="-12" y="-7" text-anchor="end" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#040814" stroke="#040814" stroke-width="3.2" stroke-linejoin="round" opacity="0.9">manishchandraraturi</text>
+            <text x="-12" y="-7" text-anchor="end" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#bae6fd">manishchandraraturi</text>
           </g>
         </g>
       </g>
